@@ -2,9 +2,13 @@ package mock;
 
 import java.util.stream.Stream;
 
-public class DoorPanel {
-   public void close() {
-        Stream.of("East Door", "West Door", "North Door", "South Door")
+/**
+ * @author Boyu Yuan
+ * @date 2020/9/15 10:28
+ */
+public class MockDoorPanel extends DoorPanel {
+    public void close() {
+        Stream.of("East Door")
                 .forEach((door) -> {
                     /*
                     第一步：调用第三方服务连接开关门系统接口...
@@ -15,8 +19,7 @@ public class DoorPanel {
                     第六步：检查门是否成功关闭
                     第七步：检查门关闭后其他系统是否正常
                     */
-                    System.out.println(door + "is closed");
+                    System.out.println(door +" "+ "is closed");
                 });
     }
 }
-
